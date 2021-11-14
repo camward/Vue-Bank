@@ -5,7 +5,9 @@
     </template>
 
     <teleport to="body">
-      <app-modal v-if="modal" title="Создать заявку" @close="modal = false"></app-modal>
+      <app-modal v-if="modal" title="Создать заявку" @close="modal = false">
+        <request-modal @created="modal = false" />
+      </app-modal>
     </teleport>
   </app-page>
 </template>
@@ -13,6 +15,7 @@
 <script>
 import {ref} from 'vue'
 import AppPage from '../components/ui/AppPage'
+import RequestModal from '../components/request/RequestModal'
 import AppModal from '../components/ui/AppModal'
 
 export default {
@@ -24,7 +27,7 @@ export default {
     }
   },
   components: {
-    AppPage, AppModal
+    AppPage, AppModal, RequestModal
   }
 }
 </script>
