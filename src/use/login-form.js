@@ -18,15 +18,13 @@ export function useLoginForm() {
             .email('Необходимо ввести корректный email')
     )
 
-    const MIN_LENGTH = 6
-
     const {value: password, errorMessage: pError, handleBlur: pBlur} = useField(
         'password',
         yup
             .string()
             .trim()
             .required('Пожалуйста введите пароль')
-            .min(MIN_LENGTH, `Пароль не может быть меньше ${MIN_LENGTH} символов`)
+            .min(6, `Пароль не может быть меньше 6 символов`)
     )
 
     const isTooManyAttempts = computed(() => submitCount.value >= 3)

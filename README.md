@@ -1,19 +1,9 @@
-# vue-practice-app
+# Vue Bank
 
-## Project setup
-```
-npm install
-```
+Склонировать проект: `https://github.com/camward/Vue-Bank.git`
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Перейти в папку проекта и установить зависимости: `npm i` или `yarn`
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Запустить проект командой `npm run serve` и перейти по адресу `http://localhost:8080/`
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Для авторизации используйте e-mail: `test@mail.ru` пароль: `123456`
